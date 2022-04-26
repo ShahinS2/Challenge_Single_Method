@@ -1,4 +1,5 @@
 def task_tracker?(text)
-  todo = "#TODO"
-  return text.include?(todo)
+  fail "NilError" if text.nil?
+  fail "TypeError" if text.is_a? Integer
+  return text.include?("#TODO")
 end
